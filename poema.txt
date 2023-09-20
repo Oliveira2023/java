@@ -1,0 +1,5 @@
+Perfis separados
+Um perfil do PowerShell é um script executado quando o PowerShell é iniciado.
+Esse script personaliza seu ambiente adicionando comandos, aliases, funções, 
+variáveis, módulos e unidades do PowerShell. O script de perfil disponibiliza
+essas personalizações em cada sessão sem precisar recriá-las manualmente.
