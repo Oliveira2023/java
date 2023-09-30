@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CSVmanipulation {
-    public final String SEPARATOR = ";";
-    public final String DELIMITER = ",";
+    public final String SEPARATOR_PONTO_VIRGULA = ";";
+    public final String SEPARATOR_VIRGULA = ",";
     public static void main(String[] args) {
         CSVmanipulation csv = new CSVmanipulation();
         List<List<String>> registroDados = csv.leitura();
@@ -32,7 +32,7 @@ public class CSVmanipulation {
     private List<String> GetRegistroDaLinha(String linha) {
         List<String> listaValores = new ArrayList<String>();
         try (Scanner linhaScanner = new Scanner(linha)) {
-            linhaScanner.useDelimiter(DELIMITER);
+            linhaScanner.useDelimiter(SEPARATOR_VIRGULA);
             while (linhaScanner.hasNext()){
                     listaValores.add(linhaScanner.next());
             }
