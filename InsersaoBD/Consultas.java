@@ -13,11 +13,11 @@ public class Consultas {
             String sql = "SELECT *FROM `clientes`";
             PreparedStatement pStat = conn.prepareStatement(sql);
             ResultSet result = pStat.executeQuery();
-            System.out.println("Resultados da consulta");
+            System.out.println("Resultados da consulta: ");
             System.out.printf("|%8s|%16s|%16s|%16s|%16s|%18s|%n", "codigo", "nome", "idade", "profissao", "cidade", "estado");
             while(result.next()){
                 String nome = result.getString("nome");
-                int idade = result.getInt("idade");
+                String idade = result.getString("idade");
                 String profissao = result.getString("profissao");
                 String cidade = result.getString("cidade");
                 String estado = result.getString("estado");
@@ -33,8 +33,8 @@ public class Consultas {
             Statement st = conn.createStatement();
             String sql = "INSERT INTO `clientes` (nome, " + 
             "idade, profissao, cidade estado) VALUES ('" + 
-            cliente.getNome() + "', " + 
-            cliente.getIdade() + ", '" + 
+            cliente.getNome() + "', '" + 
+            cliente.getIdade() + "', '" + 
             cliente.getProfissao() + "', '" + 
             cliente.getCidade() + "', '" +
             cliente.getEstado() + "')";

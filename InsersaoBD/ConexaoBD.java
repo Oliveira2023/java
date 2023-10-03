@@ -9,15 +9,15 @@ public class ConexaoBD {
     private Connection con = null;
     private final String jdbcDriver = "com.mysql.jdbc.Driver";
     private final String prefixoBD = "jdbc:mysql://";
-    private final String nomeHost = "localhost";
-    private final String portaBD = ":3306/";
+    private final String nomeHost = "127.0.0.1";
+    private final String portaBD = "3306";
     private final String nomeBanco = "bd_empresa";
-    private final String usuario = "root";
+    private final String usuario = "root@localhost";
     private final String senha = "";
     private String url = null;
 
     public ConexaoBD() {
-        url = prefixoBD + nomeHost + ":" + portaBD + "/" + nomeBanco;
+        url = prefixoBD + nomeHost  + ":" + portaBD + "/" + nomeBanco;
     }
     public Connection getConexao() {
         try {
