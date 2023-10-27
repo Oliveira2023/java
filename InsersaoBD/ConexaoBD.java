@@ -1,5 +1,6 @@
 package InsersaoBD;
 
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -21,7 +22,7 @@ public class ConexaoBD {
     }
     public Connection getConexao() {
         try {
-            if (con==null){
+            if (con == null){
                 Class.forName(jdbcDriver);
                 con = DriverManager.getConnection(url, usuario, senha);
             }else if (con.isClosed()){
